@@ -11,4 +11,6 @@ public interface IAuthentificationRepository {
     public Boolean register(User user);
 
     public List<User> list();
+
+    User getById(Long userId);
 }

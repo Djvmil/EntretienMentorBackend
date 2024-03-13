@@ -26,4 +26,9 @@ public class AuthentificationDBRepository implements IAuthentificationRepository
     public List<User> list() {
         return null;
     }
+
+    @Override
+    public User getById(Long userId) {
+        return null;
+    }
 }

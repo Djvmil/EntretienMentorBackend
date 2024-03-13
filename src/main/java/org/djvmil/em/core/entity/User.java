@@ -1,6 +1,7 @@
 package org.djvmil.em.core.entity;
 
 public class User {
+    private Long id = 1L;
     private String firstname;
     private String lastname;
     private String role;
@@ -14,7 +15,14 @@ public class User {
     public User() {
     }
 
-    public User(String firstname, String lastname, String role, String genre, String country, String phoneNumber, String email, String passwors, String birthDate) {
+    public User(String firstname, String lastname, String email) {
+        this.firstname = firstname;
+        this.lastname = lastname;
+        this.email = email;
+    }
+
+    public User(Long id, String firstname, String lastname, String role, String genre, String country, String phoneNumber, String email, String passwors, String birthDate) {
+        this.id = id;
         this.firstname = firstname;
         this.lastname = lastname;
         this.role = role;
@@ -24,6 +32,14 @@ public class User {
         this.email = email;
         this.passwors = passwors;
         this.birthDate = birthDate;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getFirstname() {
@@ -101,6 +117,7 @@ public class User {
     @Override
     public String toString() {
         return "User{" +
+                "id ='" + id + '\'' +
                 "firstname='" + firstname + '\'' +
                 ", lastname='" + lastname + '\'' +
                 ", role='" + role + '\'' +
@@ -114,6 +131,6 @@ public class User {
     }
 
     public String formatToDB() {
-        return firstname + ';' + lastname + ';' + role + ';' + genre + ';' + country + ';' + phoneNumber + ';' + email + ';' + passwors + ';' + birthDate + '\n';
+        return id.toString() + ';' +firstname + ';' + lastname + ';' + role + ';' + genre + ';' + country + ';' + phoneNumber + ';' + email + ';' + passwors + ';' + birthDate + '\n';
     }
 }

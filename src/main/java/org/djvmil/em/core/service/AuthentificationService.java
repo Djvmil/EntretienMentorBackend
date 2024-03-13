@@ -27,4 +27,8 @@ public class AuthentificationService {
     public List<User> list(){
         return repository.list();
     }
+
+    public User getById(Long userId) {
+        return repository.getById(userId);
+    }
 }
