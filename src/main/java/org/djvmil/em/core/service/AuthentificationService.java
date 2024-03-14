@@ -10,25 +10,23 @@ import java.util.List;
 @Service
 //@Component
 public class AuthentificationService {
-
-
     @Autowired // like @Inject or @Ressource in JEE
     private IAuthentificationRepository repository;
 
     public User login(String login, String password){
-        return repository.login(login, password);
+        return repository.findById(1L).orElseThrow();
     }
 
     public User register(User user){
 
-        return repository.register(user);
+        return repository.save(user);
     }
 
-    public List<User> list(){
-        return repository.list();
+    public Iterable<User> list(){
+        return repository.findAll();
     }
 
     public User getById(Long userId) {
-        return repository.getById(userId);
+        return repository.findById(userId).orElseThrow();
     }
 }

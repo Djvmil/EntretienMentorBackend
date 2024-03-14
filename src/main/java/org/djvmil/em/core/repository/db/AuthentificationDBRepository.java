@@ -1,5 +1,5 @@
 package org.djvmil.em.core.repository.db;
-
+/*
 import org.djvmil.em.core.entity.User;
 import org.djvmil.em.core.repository.IAuthentificationRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -89,3 +89,4 @@ public class AuthentificationDBRepository implements IAuthentificationRepository
                 rs.getString("BIRTHDATE"))));
     }
 }
+*/

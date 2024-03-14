@@ -1,15 +1,22 @@
 package org.djvmil.em.core.entity;
 
+import org.springframework.data.annotation.Id;
+import org.springframework.data.relational.core.mapping.Column;
+
 public class User {
+    @Id
     private Long id = 1L;
     private String firstname;
     private String lastname;
+    @Column("USER_ROLE")
     private String role;
     private String genre;
     private String country;
     private String phoneNumber;
     private String email;
-    private String passwors;
+    private String password;
+
+    @Column("BIRTHDATE")
     private String birthDate;
 
     public User() {
@@ -30,7 +37,7 @@ public class User {
         this.country = country;
         this.phoneNumber = phoneNumber;
         this.email = email;
-        this.passwors = passwors;
+        this.password = passwors;
         this.birthDate = birthDate;
     }
 
@@ -98,12 +105,12 @@ public class User {
         this.email = email;
     }
 
-    public String getPasswors() {
-        return passwors;
+    public String getPassword() {
+        return password;
     }
 
-    public void setPasswors(String passwors) {
-        this.passwors = passwors;
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public String getBirthDate() {
@@ -125,12 +132,12 @@ public class User {
                 ", country='" + country + '\'' +
                 ", phoneNumber='" + phoneNumber + '\'' +
                 ", email='" + email + '\'' +
-                ", passwors='" + passwors + '\'' +
+                ", passwors='" + password + '\'' +
                 ", birthDate='" + birthDate + '\'' +
                 '}';
     }
 
     public String formatToDB() {
-        return id.toString() + ';' +firstname + ';' + lastname + ';' + role + ';' + genre + ';' + country + ';' + phoneNumber + ';' + email + ';' + passwors + ';' + birthDate + '\n';
+        return id.toString() + ';' +firstname + ';' + lastname + ';' + role + ';' + genre + ';' + country + ';' + phoneNumber + ';' + email + ';' + password + ';' + birthDate + '\n';
     }
 }
