@@ -4,11 +4,11 @@ import org.djvmil.em.core.entity.User;
 
 import java.util.List;
 
-public interface IAuthentificationRepository {
+public interface IAuthentificationRepository/*  extends CrudRepository<User, Long> */{
 
     public User login(String login, String password);
 
-    public Boolean register(User user);
+    public User register(User user);
 
     public List<User> list();
 

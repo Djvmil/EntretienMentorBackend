@@ -5,10 +5,11 @@ import org.djvmil.em.core.repository.IAuthentificationRepository;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Repository;
 
-import java.io.FileWriter;
+import java.io.*;
+import java.util.ArrayList;
 import java.util.List;
 
-@Repository
+//@Repository
 //@Component
 public class AuthentificationFileRepository implements IAuthentificationRepository {
 
@@ -33,7 +34,7 @@ public class AuthentificationFileRepository implements IAuthentificationReposito
     }
 
     @Override
-    public Boolean register(User user){
+    public User register(User user){
         FileWriter fWriter = null;
         try{
             fWriter = new FileWriter(filePath, true);
@@ -41,7 +42,7 @@ public class AuthentificationFileRepository implements IAuthentificationReposito
         }catch (Exception e){
             e.printStackTrace();
 
-            return false;
+            return user;
         }finally {
             try{
                 if (fWriter != null)
@@ -52,40 +53,71 @@ public class AuthentificationFileRepository implements IAuthentificationReposito
             }
         }
 
-        return true;
+        return user;
     }
 
     @Override
     public List<User> list() {
-        User user = new User();
-        user.setId(4325L);
-        user.setFirstname("Mbaye");
-        user.setLastname("Ndoye");
-        user.setEmail("ndoye@em.fr");
 
-        User user1 = new User();
-        user1.setId(7725L);
-        user1.setFirstname("Omar");
-        user1.setLastname("Gaye");
-        user1.setEmail("gaye@em.fr");
+        List<User> users=new ArrayList<>();
 
-        User user2 = new User();
-        user2.setId(9225L);
-        user2.setFirstname("Djibril");
-        user2.setLastname("Diop");
-        user2.setEmail("diop@em.fr");
-
-        return List.of(user, user1, user2);
+        try(BufferedReader br = new BufferedReader(new FileReader(filePath))) {
+            for(String line; (line = br.readLine()) != null; ) {
+                final User user=new User();
+                final String[] allProperties = line.split("\\;");
+                user.setId(Long.parseLong(allProperties[0]));
+                user.setRole(allProperties[1]);
+                user.setGenre(allProperties[2]);
+                user.setCountry(allProperties[3]);
+                user.setPhoneNumber(allProperties[4]);
+                user.setEmail(allProperties[5]);
+                user.setPasswors(allProperties[6]);
+                user.setBirthDate(allProperties[7]);
+                users.add(user);
+            }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (NumberFormatException e) {
+            System.err.println("A movie from the file does not have a proper id");
+            e.printStackTrace();
+        }
+        return users;
     }
 
     @Override
     public User getById(Long userId) {
-        User user = new User();
+        final User user = new User();
         user.setId(userId);
-        user.setFirstname("Mbaye Detail");
-        user.setLastname("Ndoye");
-        user.setEmail("ndoye@em.fr");
+        try(BufferedReader br = new BufferedReader(new FileReader(filePath))) {
+            for(String line; (line = br.readLine()) != null; ) {
 
+                final String[] allProperties = line.split("\\;");
+                final long nextMovieId=Long.parseLong(allProperties[0]);
+                if (nextMovieId==userId) {
+                    user.setId(Long.parseLong(allProperties[0]));
+                    user.setRole(allProperties[1]);
+                    user.setGenre(allProperties[2]);
+                    user.setCountry(allProperties[3]);
+                    user.setPhoneNumber(allProperties[4]);
+                    user.setEmail(allProperties[5]);
+                    user.setPasswors(allProperties[6]);
+                    user.setBirthDate(allProperties[7]);
+                    return user;
+                }
+            }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (NumberFormatException e) {
+            System.err.println("A movie from the file does not have a proper id");
+            e.printStackTrace();
+        }
+        user.setFirstname("UNKNOWN");
+        user.setLastname("UNKNOWN");
+        user.setEmail("UNKNOWN");
         return user;
     }
 }

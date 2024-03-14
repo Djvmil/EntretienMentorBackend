@@ -19,7 +19,7 @@ public class AuthentificationService {
         return repository.login(login, password);
     }
 
-    public Boolean register(User user){
+    public User register(User user){
 
         return repository.register(user);
     }
