@@ -1,14 +1,27 @@
 package org.djvmil.em.core.entity;
 
-import org.springframework.data.annotation.Id;
-import org.springframework.data.relational.core.mapping.Column;
 
+import jakarta.persistence.*;
+
+import java.math.BigInteger;
+
+@Entity
 public class User {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id = 1L;
+
+    /*@Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "ID", columnDefinition = "BIGINT")
+    private String id = 1L;*/
+
+
+    @Column(nullable = false,length = 50)
     private String firstname;
+    @Column(nullable = false,length = 50)
     private String lastname;
-    @Column("USER_ROLE")
+    @Column(name = "USER_ROLE")
     private String role;
     private String genre;
     private String country;
@@ -16,7 +29,7 @@ public class User {
     private String email;
     private String password;
 
-    @Column("BIRTHDATE")
+    @Column(name = "BIRTHDATE")
     private String birthDate;
 
     public User() {
