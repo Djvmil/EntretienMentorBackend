@@ -4,6 +4,7 @@ import org.djvmil.em.core.entity.Question;
 import org.djvmil.em.core.entity.Response;
 import org.djvmil.em.core.repository.IResponseRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.jpa.provider.HibernateUtils;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -17,7 +18,15 @@ public class ResponseService {
     }
 
     public Iterable<Response> list(){
-        return repository.findAll();
+        Iterable<Response> list = repository.findAll();
+
+        list.forEach(item ->{
+            //Hibernate.initilize(item.getInterview()); //bonne pratique
+            item.getInterview().getCompany();
+            item.getQuestion().getQuestionText();
+        });
+
+        return list;
     }
 
     public Response findById(Long responseId) {

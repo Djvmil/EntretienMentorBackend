@@ -1,9 +1,11 @@
 package org.djvmil.em.core.entity;
 
+//import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 
 @Entity
 @Table(name = "Question")
+//@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 public class Question {
 
     @Id
@@ -46,12 +48,5 @@ public class Question {
         this.questionType = questionType;
     }
 
-    @Override
-    public String toString() {
-        return "Question{" +
-                "questionID=" + questionID +
-                ", questionText='" + questionText + '\'' +
-                ", questionType='" + questionType + '\'' +
-                '}';
-    }
+
 }

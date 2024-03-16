@@ -1,25 +1,27 @@
 package org.djvmil.em.core.entity;
 
 
+//import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 
 @Entity
 @Table(name = "Response")
+//@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 public class Response {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long responseID;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "userID")
     private User user;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "interviewID")
     private Interview interview;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "questionID")
     private Question question;
 

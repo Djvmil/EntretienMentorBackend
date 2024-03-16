@@ -5,41 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9f3b0c49-c930-49af-bd9e-defc0c183504" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../EntretienMentorBackOffice/src/main/java/org/djvmil/em/backoffice/api/InterviewRessource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EntretienMentorBackOffice/src/main/java/org/djvmil/em/backoffice/api/QuestionRessource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EntretienMentorBackOffice/src/main/java/org/djvmil/em/backoffice/api/ResponseRessource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EntretienMentorBackOffice/src/main/java/org/djvmil/em/backoffice/controller/InterviewController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EntretienMentorBackOffice/src/main/java/org/djvmil/em/backoffice/controller/QuestionController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EntretienMentorBackOffice/src/main/java/org/djvmil/em/backoffice/controller/ResponseController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EntretienMentorBackOffice/src/main/java/org/djvmil/em/backoffice/form/InterviewForm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EntretienMentorBackOffice/src/main/resources/data.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EntretienMentorBackOffice/src/main/resources/schema.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EntretienMentorBackOffice/src/main/resources/static/js/interview_script.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EntretienMentorBackOffice/src/main/resources/templates/create-interview.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EntretienMentorBackOffice/src/main/resources/templates/interview-page.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/djvmil/em/core/entity/Interview.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/djvmil/em/core/entity/Question.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/djvmil/em/core/entity/Response.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/djvmil/em/core/repository/IInterviewRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/djvmil/em/core/repository/IQuestionRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/djvmil/em/core/repository/IResponseRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/djvmil/em/core/repository/db/InterviewRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/djvmil/em/core/service/AuthService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/djvmil/em/core/service/QuestionService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/djvmil/em/core/service/ResponseService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../EntretienMentorBackOffice/src/main/java/org/djvmil/em/WebConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EntretienMentorBackOffice/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../EntretienMentorBackOffice/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../EntretienMentorBackOffice/src/main/java/org/djvmil/em/EntretienMentorBackOfficeApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../EntretienMentorBackOffice/src/main/java/org/djvmil/em/EntretienMentorBackOfficeApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../EntretienMentorBackOffice/src/main/java/org/djvmil/em/backoffice/api/AuthentificationRessource.java" beforeDir="false" afterPath="$PROJECT_DIR$/../EntretienMentorBackOffice/src/main/java/org/djvmil/em/backoffice/api/AuthentificationRessource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../EntretienMentorBackOffice/src/main/java/org/djvmil/em/backoffice/controller/AuthentificationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../EntretienMentorBackOffice/src/main/java/org/djvmil/em/backoffice/controller/AuthentificationController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../EntretienMentorBackOffice/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../EntretienMentorBackOffice/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../EntretienMentorBackOffice/src/main/resources/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/../EntretienMentorBackOffice/src/main/resources/static/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../EntretienMentorBackOffice/src/main/resources/static/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/../EntretienMentorBackOffice/src/main/resources/static/js/script.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/djvmil/em/core/AppFileConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/djvmil/em/core/AppFileConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/djvmil/em/core/entity/Interview.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/djvmil/em/core/entity/Interview.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/djvmil/em/core/entity/Question.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/djvmil/em/core/entity/Question.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/djvmil/em/core/entity/Response.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/djvmil/em/core/entity/Response.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/djvmil/em/core/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/djvmil/em/core/entity/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/djvmil/em/core/repository/IAuthentificationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/djvmil/em/core/repository/IAuthRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/djvmil/em/core/repository/file/AuthentificationFileRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/djvmil/em/core/repository/file/AuthFileRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/djvmil/em/core/service/AuthentificationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/djvmil/em/core/service/InterviewService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.proporties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/djvmil/em/core/service/ResponseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/djvmil/em/core/service/ResponseService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,13 +29,13 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Class" />
         <option value="HTML File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../EntretienMentorBackOffice" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="ROOT_SYNC" value="SYNC" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{

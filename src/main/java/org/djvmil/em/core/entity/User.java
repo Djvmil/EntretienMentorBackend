@@ -1,11 +1,13 @@
 package org.djvmil.em.core.entity;
 
 
+//import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 
 import java.math.BigInteger;
 
 @Entity
+//@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
