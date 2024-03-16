@@ -28,9 +28,11 @@ public class User {
     private String phoneNumber;
     private String email;
     private String password;
-
     @Column(name = "BIRTHDATE")
     private String birthDate;
+
+    private Boolean isEmailVerified;
+    private Boolean isPhoneNumbeVerified;
 
     public User() {
     }
@@ -134,6 +136,22 @@ public class User {
         this.birthDate = birthDate;
     }
 
+    public Boolean getEmailVerified() {
+        return isEmailVerified;
+    }
+
+    public void setEmailVerified(Boolean emailVerified) {
+        isEmailVerified = emailVerified;
+    }
+
+    public Boolean getPhoneNumbeVerified() {
+        return isPhoneNumbeVerified;
+    }
+
+    public void setPhoneNumbeVerified(Boolean phoneNumbeVerified) {
+        isPhoneNumbeVerified = phoneNumbeVerified;
+    }
+
     @Override
     public String toString() {
         return "User{" +
@@ -147,10 +165,12 @@ public class User {
                 ", email='" + email + '\'' +
                 ", passwors='" + password + '\'' +
                 ", birthDate='" + birthDate + '\'' +
+                ", isEmailVerified='" + isEmailVerified + '\'' +
+                ", isPhoneNumbeVerified='" + isPhoneNumbeVerified + '\'' +
                 '}';
     }
 
     public String formatToDB() {
-        return id.toString() + ';' +firstname + ';' + lastname + ';' + role + ';' + genre + ';' + country + ';' + phoneNumber + ';' + email + ';' + password + ';' + birthDate + '\n';
+        return id.toString() + ';' +firstname + ';' + lastname + ';' + role + ';' + genre + ';' + country + ';' + phoneNumber + ';' + email + ';' + password + ';' + birthDate + ';' + isEmailVerified + ';' + isPhoneNumbeVerified + '\n';
     }
 }

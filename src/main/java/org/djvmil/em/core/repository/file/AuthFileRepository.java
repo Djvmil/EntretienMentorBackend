@@ -1,18 +1,13 @@
 package org.djvmil.em.core.repository.file;
 
 import org.djvmil.em.core.entity.User;
-import org.djvmil.em.core.repository.IAuthentificationRepository;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Repository;
+import org.djvmil.em.core.repository.IAuthRepository;
 
-import java.io.*;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Optional;
 
 //@Repository
 //@Component
-public class AuthentificationFileRepository implements IAuthentificationRepository {
+public class AuthFileRepository implements IAuthRepository {
 /*
     @Value("${repository.filePath}")
     private String filePath;
