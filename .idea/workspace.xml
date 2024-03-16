@@ -5,16 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9f3b0c49-c930-49af-bd9e-defc0c183504" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../EntretienMentorBackOffice/src/main/java/org/djvmil/em/WebConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../EntretienMentorBackOffice/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../EntretienMentorBackOffice/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../EntretienMentorBackOffice/src/main/java/org/djvmil/em/EntretienMentorBackOfficeApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../EntretienMentorBackOffice/src/main/java/org/djvmil/em/EntretienMentorBackOfficeApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../EntretienMentorBackOffice/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../EntretienMentorBackOffice/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/djvmil/em/core/entity/Interview.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/djvmil/em/core/entity/Interview.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/djvmil/em/core/entity/Question.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/djvmil/em/core/entity/Question.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/djvmil/em/core/entity/Response.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/djvmil/em/core/entity/Response.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/djvmil/em/core/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/djvmil/em/core/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/djvmil/em/core/repository/IResponseRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/djvmil/em/core/repository/IResponseRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/djvmil/em/core/service/ResponseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/djvmil/em/core/service/ResponseService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

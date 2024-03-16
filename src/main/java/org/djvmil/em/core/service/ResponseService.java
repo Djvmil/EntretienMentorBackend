@@ -18,15 +18,7 @@ public class ResponseService {
     }
 
     public Iterable<Response> list(){
-        Iterable<Response> list = repository.findAll();
-
-        list.forEach(item ->{
-            //Hibernate.initilize(item.getInterview()); //bonne pratique
-            item.getInterview().getCompany();
-            item.getQuestion().getQuestionText();
-        });
-
-        return list;
+        return repository.findAll();
     }
 
     public Response findById(Long responseId) {
