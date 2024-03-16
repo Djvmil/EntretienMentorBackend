@@ -1,14 +1,15 @@
 package org.djvmil.em.core.entity;
 
-
-//import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 
 @Entity
 @Table(name = "Response")
-//@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
+@NamedEntityGraph(name = "response.join.tables",
+        attributeNodes = {
+        @NamedAttributeNode("user"),
+        @NamedAttributeNode("interview"),
+        @NamedAttributeNode("question")})
 public class Response {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long responseID;

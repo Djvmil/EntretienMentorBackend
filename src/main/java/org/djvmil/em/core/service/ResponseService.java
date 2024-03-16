@@ -6,14 +6,15 @@ import org.djvmil.em.core.repository.IResponseRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.jpa.provider.HibernateUtils;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
 public class ResponseService {
     @Autowired
     private IResponseRepository repository;
 
+    @Transactional
     public Response save(Response response){
-
         return repository.save(response);
     }
 
