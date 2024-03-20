@@ -4,20 +4,12 @@ package org.djvmil.em.core.entity;
 //import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 
-import java.math.BigInteger;
-
 @Entity
 //@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id = 1L;
-
-    /*@Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "ID", columnDefinition = "BIGINT")
-    private String id = 1L;*/
-
+    private Long userId = 1L;
 
     @Column(nullable = false,length = 50)
     private String firstname;
@@ -46,7 +38,7 @@ public class User {
     }
 
     public User(Long id, String firstname, String lastname, String role, String genre, String country, String phoneNumber, String email, String passwors, String birthDate) {
-        this.id = id;
+        this.userId = id;
         this.firstname = firstname;
         this.lastname = lastname;
         this.role = role;
@@ -59,11 +51,11 @@ public class User {
     }
 
     public Long getId() {
-        return id;
+        return userId;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public void setUserId(Long userId) {
+        this.userId = userId;
     }
 
     public String getFirstname() {
@@ -157,7 +149,7 @@ public class User {
     @Override
     public String toString() {
         return "User{" +
-                "id ='" + id + '\'' +
+                "id ='" + userId + '\'' +
                 "firstname='" + firstname + '\'' +
                 ", lastname='" + lastname + '\'' +
                 ", role='" + role + '\'' +
@@ -173,6 +165,6 @@ public class User {
     }
 
     public String formatToDB() {
-        return id.toString() + ';' +firstname + ';' + lastname + ';' + role + ';' + genre + ';' + country + ';' + phoneNumber + ';' + email + ';' + password + ';' + birthDate + ';' + isEmailVerified + ';' + isPhoneNumbeVerified + '\n';
+        return userId.toString() + ';' +firstname + ';' + lastname + ';' + role + ';' + genre + ';' + country + ';' + phoneNumber + ';' + email + ';' + password + ';' + birthDate + ';' + isEmailVerified + ';' + isPhoneNumbeVerified + '\n';
     }
 }
